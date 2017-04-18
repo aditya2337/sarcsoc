@@ -7,6 +7,7 @@ import {
   Text
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import Header from './app/components/Header.js';
 
 export default class App extends Component {
 
@@ -18,11 +19,7 @@ export default class App extends Component {
 
   render () {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Akhil Chutiya hai!
-        </Text>
-      </View>
+      <Header />
     );
   }
 }
