@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Button, Card } from 'react-native-material-design';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default class Header extends Component {
   render () {
