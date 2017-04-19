@@ -11,9 +11,9 @@ export default class Header extends Component {
             <Text>Some text to go in the body.</Text>
           </Card.Body>
           <Card.Actions position="right">
-            <Button value="ACTION" />
           </Card.Actions>
         </Card>
+        <Button text="ACTION" value="ACTION" />
       </View>
     );
   }
