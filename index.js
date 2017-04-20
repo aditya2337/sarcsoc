@@ -7,6 +7,9 @@ import {
   Text
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import { Router, Scene } from 'react-native-router-flux';
+
+import Home from './app/routes/Home';
 import Header from './app/components/Header.js';
 
 export default class App extends Component {
@@ -19,7 +22,11 @@ export default class App extends Component {
 
   render () {
     return (
-      <Header />
+      <Router>
+        <Scene key='root' hideNavBar={true}>
+          <Scene key='pageOne' component={Home} initial={true} />
+        </Scene>
+      </Router>
     );
   }
 }

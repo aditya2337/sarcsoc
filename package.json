@@ -10,6 +10,7 @@
     "react": "^16.0.0-alpha.6",
     "react-native": "^0.43.3",
     "react-native-material-design": "^0.3.7",
+    "react-native-material-ui": "^1.8.0",
     "react-native-router-flux": "^3.38.0",
     "react-native-splash-screen": "^2.0.0"
   },
