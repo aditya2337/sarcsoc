@@ -7,8 +7,12 @@ export default class Header extends Component {
     return (
       <Toolbar
         leftElement='menu'
-        centerElement='Plant A Tree'
+        centerElement='Sarcasm Society'
         onLeftElementPress={this.props.openDrawer}
+        searchable={{
+          autoFocus: true,
+          placeholder: 'Search',
+        }}
       />
     );
   }
