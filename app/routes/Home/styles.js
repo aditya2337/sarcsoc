@@ -6,6 +6,12 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     backgroundColor: '#EEEEEE'
   },
+  flex: {
+    minHeight: 70,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   container: {
     flexDirection: 'column',
     justifyContent: 'flex-start',
