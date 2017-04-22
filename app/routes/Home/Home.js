@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Text,
   View,
   DrawerLayoutAndroid
 } from 'react-native';
-import { COLOR, ThemeProvider } from 'react-native-material-ui';
+import { COLOR, ThemeProvider, Avatar, Drawer } from 'react-native-material-ui';
 import Toolbar from '../../components/Toolbar';
 import HomeContainer from './HomeContainer';
 import styles from './styles';
@@ -33,26 +32,57 @@ export default class HomeScreen extends Component {
     this.refs['DRAWER_REF'].openDrawer();
   }
 
+  handleNavigation = () => {
+    console.log('yesss');
+  }
+
   render () {
     var navigationView = (
-      <View style={{flex: 1, backgroundColor: '#fff'}}>
-        <Text style={{margin: 10, fontSize: 15, textAlign: 'left'}}>I'm in the Drawer!</Text>
-      </View>
+      <Drawer>
+        <Drawer.Header >
+          <Drawer.Header.Account
+            avatar={<Avatar text={'A'} />}
+            footer={{
+              dense: true,
+              centerElement: {
+                primaryText: 'Akhil Chutiya'
+              }
+            }}
+            />
+        </Drawer.Header>
+        <Drawer.Section
+          divider
+          items={[
+            { icon: 'select-all', value: 'All', active: true },
+            { icon: 'accessibility', value: 'Funny', onPress: this.handleNavigation },
+            { icon: 'do-not-disturb-off', value: 'Dark humour', onPress: this.handleNavigation },
+            { icon: 'data-usage', value: 'Nsfw', onPress: this.handleNavigation },
+            { icon: 'date-range', value: 'Current Events', onPress: this.handleNavigation }
+          ]}
+          />
+        <Drawer.Section
+          title='Personal'
+          items={[
+            { icon: 'info', value: 'Info' },
+            { icon: 'settings', value: 'Settings' }
+          ]}
+          />
+      </Drawer>
     );
 
     return (
-      <DrawerLayoutAndroid
-        drawerWidth={300}
-        drawerPosition={DrawerLayoutAndroid.positions.Left}
-        ref={'DRAWER_REF'}
-        renderNavigationView={() => navigationView}>
-        <ThemeProvider uiTheme={uiTheme}>
+      <ThemeProvider uiTheme={uiTheme}>
+        <DrawerLayoutAndroid
+          drawerWidth={300}
+          drawerPosition={DrawerLayoutAndroid.positions.Left}
+          ref={'DRAWER_REF'}
+          renderNavigationView={() => navigationView}>
           <View style={styles.main}>
             <Toolbar callDrawer={this.openDrawer} />
             <HomeContainer />
           </View>
-        </ThemeProvider>
-      </DrawerLayoutAndroid>
+        </DrawerLayoutAndroid>
+      </ThemeProvider>
     );
   }
 }
