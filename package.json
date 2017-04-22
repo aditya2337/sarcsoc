@@ -9,9 +9,13 @@
   "dependencies": {
     "react": "^16.0.0-alpha.6",
     "react-native": "^0.43.3",
+    "react-native-dropdown": "0.0.6",
     "react-native-material-design": "^0.3.7",
     "react-native-material-ui": "^1.8.0",
+    "react-native-modal-dropdown": "^0.4.2",
     "react-native-router-flux": "^3.38.0",
+    "react-native-select-list": "^1.0.5",
+    "react-native-selectme": "^1.2.3",
     "react-native-share": "^1.0.20",
     "react-native-splash-screen": "^2.0.0"
   },
