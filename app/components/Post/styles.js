@@ -6,6 +6,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  textContainer: {
+    paddingHorizontal: 16,
+    paddingBottom: 16
+  },
+  badgeContainer: {
+    paddingLeft: 24
   }
 });
 
