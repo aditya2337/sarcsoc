@@ -17,7 +17,8 @@
     "react-native-select-list": "^1.0.5",
     "react-native-selectme": "^1.2.3",
     "react-native-share": "^1.0.20",
-    "react-native-splash-screen": "^2.0.0"
+    "react-native-splash-screen": "^2.0.0",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
