@@ -14,8 +14,8 @@ export default class HomeContainer extends Component {
     super(props);
     this.state = {
       openStatus: true,
-      description: `Sed ut perspiciatis unde omnis iste natus error sit voluptatem` +
-      ` accusantium doloremque laudantium,` +
+      description: `Sed ut perspiciatis unde omnis iste natus error sit a git` +
+      ` a day doloremque laudantium,` +
       `totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et` +
       ` quasi architecto beatae vitae dicta sunt explicabo.`,
       message: 'John Mitri',
