@@ -3,10 +3,6 @@ import HomeScreen from './Home';
 import SplashScreen from 'react-native-splash-screen';
 
 export default class Home extends Component {
-  static navigationOptions = {
-    title: 'Sarcasm Society',
-    header: null
-  };
 
   componentDidMount () {
     setTimeout(() => {

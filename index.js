@@ -7,6 +7,6 @@ import Home from './app/routes/Home';
 const App = StackNavigator({
   Home: { screen: Home }
 },
-{headerMode: 'screen'});
+{headerMode: 'none'});
 
 export default App;
