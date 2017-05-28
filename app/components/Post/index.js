@@ -5,7 +5,7 @@ import Post from './Post';
 export default class Article extends Component {
   render () {
     return (
-      <Post />
+      <Post handleModalVisible={this.props.handleModalVisible} navigation={this.props.navigation} />
     );
   }
 }

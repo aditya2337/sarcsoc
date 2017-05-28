@@ -5,10 +5,13 @@ import {
 } from 'react-native';
 // import { Card, Button } from 'react-native-material-design';
 import { Avatar, COLOR, Card, ListItem, IconToggle, Badge } from 'react-native-material-ui';
+
+import CommentModal from '../Comment'
+
 import styles from './styles';
 import Share from 'react-native-share';
 
-export default class HomeContainer extends Component {
+export default class Post extends Component {
 
   constructor (props) {
     super(props);
@@ -19,13 +22,18 @@ export default class HomeContainer extends Component {
       `totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et` +
       ` quasi architecto beatae vitae dicta sunt explicabo.`,
       message: 'John Mitri',
-      likes: 32,
-      dislikes: 20,
+      likes: '32',
+      dislikes: '20',
+      comments: '10',
       liked: false,
       disliked: false,
       likedColor: null,
       dislikedColor: null
     };
+  }
+
+  componentWillMount() {
+    console.log(this.props);
   }
 
   handleShare = () => {
@@ -55,7 +63,7 @@ export default class HomeContainer extends Component {
   }
 
   onDislike = () => {
-    let {dislikes, disliked, dislikedColor} = this.state;
+    let {dislikes, disliked, dislikedColor, comments} = this.state;
     if (!disliked) {
       disliked = !disliked;
       dislikes++;
@@ -69,8 +77,12 @@ export default class HomeContainer extends Component {
     }
   }
 
+  setModalVisible = (bool) => {
+    this.props.handleModalVisible(bool)
+  }
+
   render () {
-    const { description, message, likes, dislikes, likedColor, dislikedColor } = this.state;
+    const { description, message, likes, dislikes, likedColor, dislikedColor, comments } = this.state;
     return (
       <Card>
         <ListItem
@@ -92,6 +104,11 @@ export default class HomeContainer extends Component {
             </Badge>
             <Badge text={dislikes} accent style={{ container: { top: -1, right: -5 } }}>
               <IconToggle name='thumb-down' onPress={this.onDislike} color={dislikedColor} />
+            </Badge>
+          </View>
+          <View>
+            <Badge text={comments} accent style={{ container: { top: -1, right: -5 } }}>
+              <IconToggle name='comment' onPress={() => this.props.navigation.navigate('CommentModal')} color={dislikedColor} />
             </Badge>
           </View>
           <View>

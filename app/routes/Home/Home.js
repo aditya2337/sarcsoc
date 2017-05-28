@@ -80,7 +80,7 @@ export default class HomeScreen extends Component {
           renderNavigationView={() => navigationView}>
           <View style={styles.main}>
             <Toolbar callDrawer={this.openDrawer} />
-            <HomeContainer />
+            <HomeContainer navigation={this.props.navigation} />
           </View>
         </DrawerLayoutAndroid>
       </ThemeProvider>

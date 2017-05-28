@@ -11,6 +11,6 @@ export default class Home extends Component {
   }
 
   render () {
-    return <HomeScreen />;
+    return <HomeScreen navigation={this.props.navigation} />;
   }
 }

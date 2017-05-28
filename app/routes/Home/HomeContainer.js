@@ -8,12 +8,23 @@ import { Select, Option } from 'react-native-select-list';
 
 import styles from './styles';
 
+import CommentModal from '../../components/Comment';
+
 import Article from '../../components/Post';
 export default class HomeContainer extends Component {
 
   constructor (props) {
     super(props);
-    this.state = {openStatus: true, see: 'I wanna see', read: 'I wanna read'};
+    this.state = {openStatus: true, see: 'I wanna see', read: 'I wanna read',
+      modalVisible: false};
+  }
+
+  componentDidMount () {
+    console.log(this.props);
+  }
+
+  setModalVisible = (visible) => {
+    this.setState({modalVisible: visible});
   }
 
   render () {
@@ -36,13 +47,14 @@ export default class HomeContainer extends Component {
               <Picker.Item label='Something' value='smthng' />
             </Picker>
           </View>
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
+          <Article handleModalVisible={this.setModalVisible} navigation={this.props.navigation} />
+          <Article handleModalVisible={this.setModalVisible} navigation={this.props.navigation} />
+          <Article handleModalVisible={this.setModalVisible} navigation={this.props.navigation} />
+          <Article handleModalVisible={this.setModalVisible} navigation={this.props.navigation} />
+          <Article handleModalVisible={this.setModalVisible} navigation={this.props.navigation} />
+          <Article handleModalVisible={this.setModalVisible} navigation={this.props.navigation} />
         </ScrollView>
+        <CommentModal visible={this.state.modalVisible} />
       </View>
     );
   }
