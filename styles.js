@@ -1,0 +1,39 @@
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: '#EEEEEE'
+  },
+  flex: {
+    minHeight: 70,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  container: {
+    flexDirection: 'column',
+    paddingTop: 30,
+    paddingBottom: 30
+  },
+  welcome: {
+    margin: 10
+  },
+  instructions: {
+    color: '#333333',
+    marginBottom: 5
+  },
+  locationImageContainer: {
+    minHeight: 300,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  locationImage: {
+    height: 200,
+    width: 200
+  }
+});
+
+export default styles;
