@@ -90,8 +90,6 @@ export default class HomeContainer extends Component {
             <Badge text={likes} style={{ container: { top: -1, right: -5 } }}>
               <IconToggle name='thumb-up' onPress={this.onLike} color={likedColor} />
             </Badge>
-          </View>
-          <View>
             <Badge text={dislikes} accent style={{ container: { top: -1, right: -5 } }}>
               <IconToggle name='thumb-down' onPress={this.onDislike} color={dislikedColor} />
             </Badge>

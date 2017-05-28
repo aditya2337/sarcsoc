@@ -7,7 +7,7 @@ export default class Home extends Component {
     title: 'Sarcasm Society',
     header: null
   };
-  
+
   componentDidMount () {
     setTimeout(() => {
       SplashScreen.hide();
